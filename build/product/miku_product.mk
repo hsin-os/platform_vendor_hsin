@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018 The Android Open Source Project
-# Copyright (C) 2021-2022 Miku UI
+# Copyright (C) 2021-2022 Hsin OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,21 +16,21 @@
 #
 
 # Inherit from our versioning
-$(call inherit-product, vendor/miku/config/versioning.mk)
+$(call inherit-product, vendor/hsin/config/versioning.mk)
 
 # Inherit from our overlay
-$(call inherit-product, vendor/miku/config/overlay.mk)
+$(call inherit-product, vendor/hsin/config/overlay.mk)
 
 # Sign for official build
 ifeq ($(TARGET_FORCE_SIGN_CHECK),true)
-$(call inherit-product, vendor/miku-secret/keys/sign.mk)
+$(call inherit-product, vendor/hsin-secret/keys/sign.mk)
 else
-$(call inherit-product-if-exists, vendor/miku-secret/keys/sign.mk)
+$(call inherit-product-if-exists, vendor/hsin-secret/keys/sign.mk)
 endif
 
 ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
-$(call enforce-product-packages-exist-internal,$(wildcard device/*/$(MIKU_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
+$(call enforce-product-packages-exist-internal,$(wildcard device/*/$(HSIN_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
 # Applications
@@ -40,16 +40,10 @@ else
     PRODUCT_PACKAGES += Camera2
 endif
 
-# Miku UI Music Center
-ifneq ($(TARGET_EXCLUDE_MUSIC_CENTER),true)
-PRODUCT_PACKAGES += MikuUIMusicCenter
-endif
-
 PRODUCT_PACKAGES += \
     Gboard \
     LiveWallpapersPicker \
     messaging \
-    MUBB \
     MULS_Dummy \
     PartnerBookmarksProvider \
     QuickAccessWallet \
@@ -65,7 +59,7 @@ endif
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/miku/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    vendor/hsin/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 
 # Charger mode images
 PRODUCT_PACKAGES += \
@@ -74,25 +68,25 @@ PRODUCT_PACKAGES += \
 
 # Ringtone
 PRODUCT_COPY_FILES += \
-    vendor/miku/ringtone/miku_secret.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/miku_secret.ogg \
-    vendor/miku/ringtone/miku_deep_sea_girl.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/miku_deep_sea_girl.ogg \
-    vendor/miku/ringtone/miku_noti_msg.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/miku_noti_msg.ogg
+    vendor/hsin/ringtone/peritune_where_fairies_hide.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/peritune_where_fairies_hide.ogg \
+    vendor/hsin/ringtone/peritunematerial_dark_moon.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/peritunematerial_dark_moon.ogg \
+    vendor/hsin/ringtone/hsin_moon_dew_drop.wav:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/hsin_moon_dew_drop.wav
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=miku_secret.ogg \
-    ro.config.notification_sound=miku_noti_msg.ogg
+    ro.config.ringtone=peritune_where_fairies_hide.ogg \
+    ro.config.notification_sound=hsin_moon_dew_drop
 
 # Performance Mode
 PRODUCT_COPY_FILES += \
-    vendor/miku/prebuilt/common/etc/init/init.miku.performance_mode.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.miku.performance_mode.rc
+    vendor/hsin/prebuilt/common/etc/init/init.hsin.performance_mode.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.hsin.performance_mode.rc
 
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-# MikuWallpapers
+# HsinWallpapers
 PRODUCT_PACKAGES += \
-    MikuWallpapers
+    HsinWallpapers
 
 # ThemeOverlays
 include packages/overlays/Themes/themes.mk
@@ -106,8 +100,3 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
 # Disable extra StrictMode features on all non-engineering builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
-
-# Boost Framework
-ifneq ($(TARGET_MIKU_BOOST_FRAMEWORK_PLATFORM),)
-$(call inherit-product, device/qcom/perf/BoostFramework.mk)
-endif

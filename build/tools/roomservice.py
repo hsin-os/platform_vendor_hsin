@@ -42,11 +42,11 @@ except ImportError:
 
 DEBUG = False
 
-custom_local_manifest = ".repo/local_manifests/diva.xml"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'Vampire_v3')
-custom_dependencies = "miku.dependencies"
-org_manifest = "diva"  # leave empty if org is provided in manifest
-org_display = "Diva-Room"  # needed for displaying
+custom_local_manifest = ".repo/local_manifests/hsin.xml"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'Moon_fox')
+custom_dependencies = "hsin.dependencies"
+org_manifest = "hsin"  # leave empty if org is provided in manifest
+org_display = "hsin-os"  # needed for displaying
 
 github_auth = None
 
@@ -288,7 +288,7 @@ def main():
     for repository in repositories:
         repo_name = repository['name']
 
-        if not (repo_name.startswith("Miku_device_") and
+        if not (repo_name.startswith("Hsin_device_") and
                 repo_name.endswith("_" + device)):
             continue
         print("Found repository: %s" % repository['name'])

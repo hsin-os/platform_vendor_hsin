@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 Miku UI
+# Copyright (C) 2021-2022 Hsin OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
 LOCAL_USE_AAPT2 := true
 
-LOCAL_PACKAGE_NAME := MikuWallpapers
+LOCAL_PACKAGE_NAME := HsinWallpapers
 
 LOCAL_PRODUCT_MODULE := true
 
