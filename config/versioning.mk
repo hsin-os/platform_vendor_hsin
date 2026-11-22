@@ -3,6 +3,7 @@
 # Copyright (C) 2020 Raphielscape LLC. and Haruka LLC.
 # Copyright (C) 2020 StormbreakerOSS
 # Copyright (C) 2021-2023 Miku UI
+# Copyright (C) 2026 Hsin OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

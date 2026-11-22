@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2018 The Android Open Source Project
-# Copyright (C) 2021-2022 Hsin OS
+# Copyright (C) 2021-2022 Miku UI
+# Copyright (C) 2026 Hsin OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
