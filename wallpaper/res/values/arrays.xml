@@ -14,21 +14,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <array name="partner_wallpapers" translatable="false">
-        <item>miku_01</item>
-        <item>miku_02</item>
-        <item>miku_03</item>
-        <item>miku_04</item>
-        <item>miku_05</item>
-        <item>miku_06</item>
-        <item>miku_07</item>
-        <item>miku_08</item>
-        <item>miku_09</item>
-        <item>miku_10</item>
-        <item>miku_11</item>
-        <item>miku_12</item>
-        <item>miku_13</item>
-        <item>miku_14</item>
-        <item>miku_15</item>
-        <item>miku_16</item>
+        <item>hsin_typography</item>
+        <item>hsin_misty_fox</item>
+        <item>hsin_vermillion_seal</item>
+        <item>hsin_crescent_peaks</item>
+        <item>hsin_gold_heart</item>
+        <item>hsin_crimson_dusk</item>
+        <item>hsin_jade_monogram</item>
+        <item>hsin_duality</item>
+        <item>hsin_vermillion_heart</item>
+        <item>hsin_gold_leaf</item>
+        <item>hsin_grid</item>
     </array>
 </resources>

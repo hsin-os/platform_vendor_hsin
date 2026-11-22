@@ -13,7 +13,11 @@ def generate_smallvariants(resource):
     clean(wallpapers_path)
     wallpapers = os.listdir(wallpapers_path)
 
-    for wallpaper in wallpapers:
+    for wallpaper in sorted(wallpapers):
+        # Never make thumbnails of thumbnails
+        if os.path.splitext(wallpaper)[0].endswith("_small"):
+            continue
+
         # Append _small.jpg to the wallpaper
         wallpaper_small = os.path.splitext(wallpaper)[0] + "_small.jpg"
         wallpaper_small_path = os.path.join(wallpapers_path, wallpaper_small)
@@ -22,8 +26,8 @@ def generate_smallvariants(resource):
         with Image.open(os.path.join(wallpapers_path, wallpaper)) as img:
             size = int(img.width / 4), int(img.height / 4)
 
-            img_small = img.resize(size, Image.ANTIALIAS)
-            img_small.save(wallpaper_small_path, "JPEG")
+            img_small = img.convert("RGB").resize(size, Image.LANCZOS)
+            img_small.save(wallpaper_small_path, "JPEG", quality=90)
 
 def clean(wallpapers_path):
     wallpapers = os.listdir(wallpapers_path)
