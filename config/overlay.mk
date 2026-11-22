@@ -7,10 +7,10 @@
 
 # Overlays
 PRODUCT_PACKAGES += \
-    MikuFrameworksOverlay \
-    MikuLauncher3Overlay \
-    MikuNetworkStackOverlay \
-    MikuSettingsOverlay \
-    MikuSettingsProviderOverlay \
-    MikuSystemUIOverlay
+    HsinFrameworksOverlay \
+    HsinLauncher3Overlay \
+    HsinNetworkStackOverlay \
+    HsinSettingsOverlay \
+    HsinSettingsProviderOverlay \
+    HsinSystemUIOverlay
 

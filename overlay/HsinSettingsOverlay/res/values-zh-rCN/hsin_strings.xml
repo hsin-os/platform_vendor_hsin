@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2021 Miku UI
+     Copyright (C) 2026 Hsin OS
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Category Titles -->
+    <string name="network_category_title">无线连接</string>
+    <string name="apps_category_title">应用程式</string>
+    <string name="display_and_sound_category_title">显示与声音</string>
+    <string name="security_category_title">安全</string>
+    <string name="others_category_title">其他</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">值: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">默认</string>
+    <string name="custom_seekbar_default_value_to_set">默认值: <xliff:g id="v">%s</xliff:g>\n长按进行设置</string>
+    <string name="custom_seekbar_default_value_is_set">已设为默认值</string>
+
+    <!-- Auto Reboot -->
+    <string name="auto_reboot_title">自动重启</string>
+    <string name="auto_reboot_summary">如果手机在选定的小时数内未解锁，将自动重启你的 Hsin OS。</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">三指截屏</string>
+    <string name="three_finger_gesture_summary">三指下滑，定格这一刻的美好～ (✿◠‿◠)</string>
+
+    <!-- Maintainer name -->
+    <string name="maintainer_name">✦ フィユー ✦</string>
+
+    <!-- Hsin build type -->
+    <string name="hsin_type">✦ 构建类型 ✦</string>
+
+    <!-- Hsin version -->
+    <string name="hsin_version">Hsin OS Ver.</string>
+    <string name="hsin_version_uri" translatable="false">https://github.com/hsin-os</string>
+
+    <!-- SELinux Status -->
+    <string name="selinux_status">SELinux 状态</string>
+    <string name="selinux_status_disabled">被禁用了？这可不太寻常... (・_・;)</string>
+    <string name="selinux_status_permissive">Permissive～请谨慎行事哦～</string>
+    <string name="selinux_status_enforcing">Enforcing。圣域正在守护着你。</string>
+
+    <!-- Status Bar Lyric -->
+    <string name="status_bar_show_lyric_title">状态栏歌词（需要应用支持）</string>
+    <string name="status_bar_show_lyric_summary">在状态栏显示当前播放歌曲的歌词。</string>
+
+    <!-- Units -->
+    <string name="unit_seconds">秒</string>
+    <string name="unit_milliseconds">毫秒</string>
+    <string name="unit_pixels">dp</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">启用高级重启</string>
+    <string name="global_actions_advanced_reboot_summary">在电源菜单中显示额外的重启选项</string>
+
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">关联铃声与通知音量</string>
+
+    <!-- Double Tap to Sleep Statusbar -->
+    <string name="double_tap_sleep_gesture_title">双击锁屏</string>
+    <string name="double_tap_sleep_gesture_summary">双击状态栏或锁屏界面的任意位置，让 Hsin 休息一下吧～ (✿◡‿◡)</string>
+
+    <!-- Preference and settings suggestion title text for screen off UDFPS (phone) [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title" product="default">长按屏下指纹传感器解锁手机</string>
+    <!-- Preference and settings suggestion title text for screen off UDFPS  (tablet) [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title" product="tablet">长按屏下指纹传感器解锁平板</string>
+    <!-- Preference and settings suggestion title text for screen off UDFPS  (device) [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title" product="device">长按屏下指纹传感器解锁设备</string>
+    <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
+    <string name="ambient_display_screen_off_udfps_summary">息屏时，长按屏下指纹传感器即可唤醒屏幕并解锁。</string>
+
+    <!-- Performance Mode -->
+    <string name="cpu_performance_mode_title">最高性能</string>
+    <string name="cpu_performance_mode_summary">Hsin OS 将会让 CPU 始终运行在最高频率！可能会显著降低电池续航哦。</string>
+
+    <!-- Navigation bar hint -->
+    <string name="show_navbar_gesture_bar_title">小白条</string>
+    <string name="show_navbar_gesture_bar_summary">在屏幕底部显示导航小白条</string>
+
+</resources>

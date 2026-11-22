@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+**
+** Copyright 2021-2023 Miku UI
+** Copyright (C) 2026 Hsin OS
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string-array name="random_msg_after_shake">
+    <item>バックグラウンドのアプリを綺麗に片付けました！</item>
+    <item>そんなに振らないでください～、月狐まで目を回してしまいます…！(◎_◎;)</item>
+    <item>大切なタスクは忘れていませんよね？(✿◡‿◡)</item>
+    <item>どうかしっかり支えていてくださいね！o(&gt;&lt; )o</item>
+    <item>端末は投げないでくださいね…！大事に扱ってください～(/ω＼*)</item>
+    <item>そよ風が吹いて、残っていたタスクを優しく払い去りました～</item>
+    <item>玄方の歯車が少し驚いてしまいましたよ…(・_・;)</item>
+    <item>わっ、急にどうされたのですか！？Σ(っ °Д °;)っ</item>
+    <item>（目が回ってしまいました…）</item>
+    <item>素心の記録：異常な振動入力を検知。メモリを解放しました。</item>
+    <item>ふぅ…明州の灯籠のように、すべて穏やかになりましたね。(✿◠‿◠)</item>
+    <item>噂によると、端末を100回振ると玄方の占い籤が飛び出すとか…出ませんよ？¯\\_(ツ)_/¯</item>
+    <item>（ひとやすみ…）</item>
+    <item>ご報告します！バックグラウンドの不要なタスクはすべて封印しました！✦(^^ゞ</item>
+    <item>いつもおそばでお守りしていますからね…(✿´꒳`)</item>
+    <item>五岳の柱が光を放ち、メモリがすっきりと澄み渡りました！(*￣▽￣*)</item>
+    <item>素心の分析：運動エネルギーをメモリ最適化へ変換完了。(¬‿¬ )</item>
+    <item>ゆらゆら…月狐のしっぽまで揺れています～ヽ(゜▽゜　)－</item>
+  </string-array>
+</resources>
