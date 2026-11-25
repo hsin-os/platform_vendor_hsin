@@ -1,5 +1,6 @@
 // Copyright 2015 Google Inc. All rights reserved.
 // Copyright (C) 2018,2021 The LineageOS Project
+// Copyright (C) 2026 Hsin OS
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +28,7 @@ import (
 )
 
 func init() {
-	android.RegisterModuleType("miku_generator", GeneratorFactory)
+	android.RegisterModuleType("hsin_generator", GeneratorFactory)
 }
 
 var String = proptools.String
@@ -203,12 +204,12 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	if depRoot == "" {
 		depRoot = ctx.ModuleDir()
 	} else {
-		depRoot = mikuExpandVariables(ctx, depRoot)
+		depRoot = hsinExpandVariables(ctx, depRoot)
 	}
 
 	// Glob dep_files property
 	for _, dep_file := range g.properties.Dep_files {
-		dep_file = mikuExpandVariables(ctx, dep_file)
+		dep_file = hsinExpandVariables(ctx, dep_file)
 		globPath := filepath.Join(depRoot, dep_file)
 		paths, err := ctx.GlobWithDeps(globPath, nil)
 		if err != nil {
@@ -220,7 +221,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		}
 	}
 
-	cmd := mikuExpandVariables(ctx, String(g.properties.Cmd))
+	cmd := hsinExpandVariables(ctx, String(g.properties.Cmd))
 
 	rawCommand, err := android.Expand(cmd, func(name string) (string, error) {
 		switch name {

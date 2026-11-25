@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func mikuExpandVariables(ctx android.ModuleContext, in string) string {
-	mikuVars := ctx.Config().VendorConfig("mikuVarsPlugin")
+func hsinExpandVariables(ctx android.ModuleContext, in string) string {
+	hsinVars := ctx.Config().VendorConfig("hsinVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if mikuVars.IsSet(name) {
-			return mikuVars.String(name), nil
+		if hsinVars.IsSet(name) {
+			return hsinVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

@@ -1,7 +1,7 @@
-// Miku soong configs
+// Hsin OS soong configs
 
 bootstrap_go_package {
-    name: "soong-miku-generator",
+    name: "soong-hsin-generator",
     pkgPath: "hsin/soong/generator",
     deps: [
         "blueprint",
@@ -17,7 +17,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-miku_generator {
+hsin_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
@@ -38,7 +38,7 @@ miku_generator {
 }
 
 bootstrap_go_package {
-    name: "soong-miku-mkdir",
+    name: "soong-hsin-mkdir",
     pkgPath: "hsin/soong/mkdir",
     deps: [
         "blueprint",
@@ -75,7 +75,7 @@ cc_library_headers {
 soong_config_module_type {
     name: "aapt_version_code",
     module_type: "java_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["aapt_version_code"],
     properties: ["aaptflags"],
 }
@@ -95,7 +95,7 @@ aapt_version_code {
 soong_config_module_type {
     name: "camera_override_format_from_reserved",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     bool_variables: ["camera_override_format_from_reserved"],
     properties: ["cppflags"],
 }
@@ -112,7 +112,7 @@ camera_override_format_from_reserved {
 soong_config_module_type {
     name: "gralloc_10_usage_bits",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["additional_gralloc_10_usage_bits"],
     properties: ["cppflags"],
 }
@@ -129,7 +129,7 @@ gralloc_10_usage_bits {
 soong_config_module_type {
     name: "power_libperfmgr",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["target_power_libperfmgr_mode_extension_lib"],
     properties: [
         "whole_static_libs",
@@ -148,7 +148,7 @@ power_libperfmgr {
 soong_config_module_type {
     name: "target_process_sdk_version_overrides",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["target_process_sdk_version_override"],
     properties: ["cppflags"],
 }
@@ -165,7 +165,7 @@ target_process_sdk_version_overrides {
 soong_config_module_type {
     name: "gralloc_handle_custom_content_md_reserved_size",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     bool_variables: ["gralloc_handle_has_custom_content_md_reserved_size"],
     properties: ["export_cflags"],
 }
@@ -182,7 +182,7 @@ gralloc_handle_custom_content_md_reserved_size {
 soong_config_module_type {
     name: "gralloc_handle_reserved_size",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     bool_variables: ["gralloc_handle_has_reserved_size"],
     properties: ["export_cflags"],
 }
@@ -199,7 +199,7 @@ gralloc_handle_reserved_size {
 soong_config_module_type {
     name: "gralloc_handle_ubwcp_format",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     bool_variables: ["gralloc_handle_has_ubwcp_format"],
     properties: ["export_cflags"],
 }
@@ -216,7 +216,7 @@ gralloc_handle_ubwcp_format {
 soong_config_module_type {
     name: "vendor_init",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["target_init_vendor_lib"],
     properties: ["whole_static_libs"],
 }
@@ -233,7 +233,7 @@ vendor_init {
 soong_config_module_type {
     name: "surfaceflinger_udfps_lib",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     value_variables: ["target_surfaceflinger_udfps_lib"],
     properties: [
         "cppflags",
@@ -254,7 +254,7 @@ surfaceflinger_udfps_lib {
 soong_config_module_type {
     name: "camera_needs_client_info_lib",
     module_type: "cc_defaults",
-    config_namespace: "mikuGlobalVars",
+    config_namespace: "hsinGlobalVars",
     bool_variables: ["camera_needs_client_info_lib"],
     properties: [
         "cppflags",
@@ -276,7 +276,7 @@ camera_needs_client_info_lib {
 soong_config_module_type {
     name: "librmnetctl_pre_uplink",
     module_type: "cc_defaults",
-    config_namespace: "mikuQcomVars",
+    config_namespace: "hsinQcomVars",
     bool_variables: ["uses_pre_uplink_features_netmgrd"],
     properties: ["cflags"],
 }
@@ -293,7 +293,7 @@ librmnetctl_pre_uplink {
 soong_config_module_type {
     name: "extended_compress_format",
     module_type: "cc_defaults",
-    config_namespace: "mikuQcomVars",
+    config_namespace: "hsinQcomVars",
     bool_variables: ["supports_extended_compress_format"],
     properties: ["cflags"],
 }
@@ -310,7 +310,7 @@ extended_compress_format {
 soong_config_module_type {
     name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
-    config_namespace: "mikuQcomVars",
+    config_namespace: "hsinQcomVars",
     value_variables: ["qcom_display_headers_namespace"],
     properties: [
         "cppflags",
