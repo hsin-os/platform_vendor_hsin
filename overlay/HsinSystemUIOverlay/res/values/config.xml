@@ -22,7 +22,6 @@
         <item>com.android.phone</item>
         <item>com.android.settings</item>
         <item>com.android.systemui</item>
-        <item>com.qualcomm.qti.cne</item>
     </string-array>
     
     <!-- ComponentName for the file browsing app that the system would expect to be used in work

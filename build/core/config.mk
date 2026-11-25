@@ -13,5 +13,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Rules for QCOM targets
-# include $(TOPDIR)vendor/miku/build/core/qcom_target.mk
