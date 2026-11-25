@@ -45,7 +45,6 @@ PRODUCT_PACKAGES += \
     Gboard \
     LiveWallpapersPicker \
     messaging \
-    MULS_Dummy \
     PartnerBookmarksProvider \
     QuickAccessWallet \
     Stk \

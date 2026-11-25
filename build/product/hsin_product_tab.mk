@@ -48,7 +48,6 @@ endif
 PRODUCT_PACKAGES += \
     Gboard \
     LiveWallpapersPicker \
-    MULS_Dummy \
     PartnerBookmarksProvider \
     ThemePicker \
     ThemesStub
