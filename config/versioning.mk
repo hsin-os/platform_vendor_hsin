@@ -49,10 +49,10 @@ else
 endif
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.system.miku.version=$(PLATFORM_MIKU_VERSION)
+    ro.system.hsin.version=$(PLATFORM_MIKU_VERSION)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.miku.version=$(MIKU_ROM_VERSION) \
-    ro.miku.buildtype=$(TARGET_MIKU_BUILD_VARIANT) \
-    ro.miku.maintainer=$(TARGET_MIKU_MASTER)
+    ro.hsin.version=$(MIKU_ROM_VERSION) \
+    ro.hsin.buildtype=$(TARGET_MIKU_BUILD_VARIANT) \
+    ro.hsin.maintainer=$(TARGET_MIKU_MASTER)
 
