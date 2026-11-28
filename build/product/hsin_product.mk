@@ -42,14 +42,20 @@ else
 endif
 
 PRODUCT_PACKAGES += \
+    Etar \
+    ExactCalculator \
     Gboard \
+    Glimpse \
+    Jelly \
     LiveWallpapersPicker \
     messaging \
     PartnerBookmarksProvider \
     QuickAccessWallet \
+    Recorder \
     Stk \
     ThemePicker \
-    ThemesStub
+    ThemesStub \
+    Twelve
 
 # Lineage AudioFX
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)

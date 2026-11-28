@@ -1,0 +1,26 @@
+// Minimal copy of LineageOS' org.lineageos.lib.phone (lineage-sdk/lib) and
+// its spn-info schema (vendor/lineage/spn), needed by the Lineage Dialer.
+// Hsin does not ship lineage-sdk / vendor/lineage, so we carry just this.
+// SPDX-License-Identifier: Apache-2.0
+
+filegroup {
+    name: "spn-schema",
+    srcs: ["spn/SpnInfo.xsd"],
+}
+
+xsd_config {
+    name: "spn-info",
+    srcs: [":spn-schema"],
+    api_dir: "spn/schema",
+    package_name: "org.lineageos.lib.phone.spn",
+}
+
+java_library {
+    name: "org.lineageos.lib.phone",
+    sdk_version: "current",
+    static_libs: ["libphonenumber"],
+    srcs: [
+        "src/org/lineageos/lib/phone/*.java",
+        ":spn-info",
+    ],
+}
